@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { createClient } from '@/lib/supabase/server'
+import { createServiceRoleClient } from '@/lib/supabase/server'
 import { format, parseISO } from 'date-fns'
 import { es } from 'date-fns/locale'
 import { CheckCircle, Scissors, CalendarDays, Clock, User, MapPin } from 'lucide-react'
@@ -12,7 +12,7 @@ export default async function ConfirmationPage({
   params: Promise<{ slug: string; appointmentId: string }>
 }) {
   const { appointmentId } = await params
-  const supabase = await createClient()
+  const supabase = createServiceRoleClient()
 
   const { data: appointment } = await supabase
     .from('appointments')
