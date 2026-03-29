@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-bg-public: #F8F5FF;
+  --color-bg-dark: #0F0A14;
+  --color-primary: #6B21A8;
+  --color-primary-hover: #581c87;
+  --color-accent: #A855F7;
+  --color-accent-light: #d8b4fe;
+
+  /* Dark surface levels */
+  --color-dark-100: #1a1225;
+  --color-dark-200: #231830;
+  --color-dark-300: #2e2040;
+
+  /* Typography */
+  --font-heading: var(--font-orbitron), sans-serif;
+  --font-body: var(--font-montserrat), sans-serif;
+
+  /* Shadows */
+  --shadow-brutal: 4px 4px 0px #000000;
+  --shadow-brutal-sm: 2px 2px 0px #000000;
+  --shadow-brutal-purple: 4px 4px 0px #6B21A8;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Glassmorphism card for dark backoffice */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Scrollbar dark */
+.scrollbar-dark::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-dark::-webkit-scrollbar-track {
+  background: #1a1225;
+}
+.scrollbar-dark::-webkit-scrollbar-thumb {
+  background: #6B21A8;
+  border-radius: 3px;
+}
